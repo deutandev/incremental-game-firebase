@@ -36,11 +36,12 @@ public class GameManager : MonoBehaviour
     private List<TapText> _tapTextPool = new List<TapText> ();
     private float _collectSecond;
 
-    public double TotalGold { get; private set; }
+    public double UserDataManager.Progress.Gold { get; private set; }
 
     private void Start ()
     {
         AddAllResources ();
+        GoldInfo.text = $"Gold: { UserDataManager.Progress.Gold.ToString ("0") }";
     }
 
     private void Update ()
@@ -98,11 +99,11 @@ public class GameManager : MonoBehaviour
             bool isBuyable = false;
             if (resource.IsUnlocked)
             {
-                isBuyable = TotalGold >= resource.GetUpgradeCost ();
+                isBuyable = UserDataManager.Progress.Gold >= resource.GetUpgradeCost ();
             }
             else
             {
-                isBuyable = TotalGold >= resource.GetUnlockCost ();
+                isBuyable = UserDataManager.Progress.Gold >= resource.GetUnlockCost ();
             }
 
             resource.ResourceImage.sprite = ResourcesSprites[isBuyable ? 1 : 0];
@@ -129,8 +130,10 @@ public class GameManager : MonoBehaviour
 
     public void AddGold (double value)
     {
-        TotalGold += value;
-        GoldInfo.text = $"Gold: { TotalGold.ToString ("0") }";
+        UserDataManager.Progress.Gold += value;
+        GoldInfo.text = $"Gold: { UserDataManager.Progress.Gold.ToString ("0") }";
+        // Save gold
+        UserDataManager.Save ();
     }
 
     public void CollectByTap (Vector3 tapPosition, Transform parent)
