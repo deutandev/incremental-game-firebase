@@ -36,7 +36,8 @@ public class GameManager : MonoBehaviour
     private List<TapText> _tapTextPool = new List<TapText> ();
     private float _collectSecond;
 
-    public double UserDataManager.Progress.Gold { get; private set; }
+    // Save/load data
+    // public double UserDataManager.Progress.Gold { get; private set; }
 
     private void Start ()
     {
