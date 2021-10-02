@@ -63,12 +63,15 @@ public class GameManager : MonoBehaviour
     private void AddAllResources ()
     {
         bool showResources = true;
+        // Add/Load resources
+        int index = 0;
         foreach (ResourceConfig config in ResourcesConfigs)
         {
             GameObject obj = Instantiate (ResourcePrefab.gameObject, ResourcesParent, false);
             ResourceController resource = obj.GetComponent<ResourceController> ();
 
-            resource.SetConfig (config);
+            // Add/Load resources
+            resource.SetConfig (index, config);
             obj.gameObject.SetActive (showResources);
 
             if (showResources && !resource.IsUnlocked)
@@ -77,6 +80,8 @@ public class GameManager : MonoBehaviour
             }
 
             _activeResources.Add (resource);
+            // Add/Load resources
+            index++;
         }
     }
 
