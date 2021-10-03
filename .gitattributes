@@ -1,0 +1,4 @@
+Assets/Firebase/Plugins/x86_64/FirebaseCppAuth.so filter=lfs diff=lfs merge=lfs -text
+Assets/Firebase/Plugins/x86_64/FirebaseCppStorage.so filter=lfs diff=lfs merge=lfs -text
+Assets/Firebase/Plugins/x86_64/FirebaseCppAnalytics.so filter=lfs diff=lfs merge=lfs -text
+Assets/Firebase/Plugins/x86_64/FirebaseCppApp-8_3_0.so filter=lfs diff=lfs merge=lfs -text
