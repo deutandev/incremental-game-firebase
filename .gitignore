@@ -61,3 +61,5 @@ crashlytics-build.properties
 # Linux directory config
 .directory
 
+# Firebase package
+Assets/Firebase/
