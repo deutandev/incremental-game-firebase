@@ -77,6 +77,9 @@ public static class UserDataManager
         // Cloud save
         if (uploadToCloud)
         {
+            // Track user propertiy
+            AnalyticsManager.SetUserProperties ("gold", Progress.Gold.ToString ());
+            
             byte[] data = Encoding.Default.GetBytes (json);
             StorageReference targetStorage = GetTargetCloudStorage ();
 
