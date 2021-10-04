@@ -613,6 +613,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AutoCollectPercentage: 0.1
+  SaveDelay: 5
   ResourcesConfigs:
   - Name: Click
     UnlockCost: 0
@@ -1418,7 +1419,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1329514925}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.9999998
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1492,7 +1493,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000030108613, y: -0.00003878313}
+  m_AnchoredPosition: {x: -0.000030108613, y: 0.000037217866}
   m_SizeDelta: {x: -0.000030506604, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1802055846
@@ -1770,7 +1771,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2140824160}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.9999999
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
